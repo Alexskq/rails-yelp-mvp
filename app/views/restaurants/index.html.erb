@@ -1,0 +1,8 @@
+<h1>Restaurants#index</h1>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li> <%=link_to restaurant.name, restaurant_path(restaurant)  %></li>
+  <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+  <% end %>
+</ul>
